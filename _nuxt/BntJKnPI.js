@@ -1,0 +1,1 @@
+import{_ as t}from"./DlAUqK2U.js";import{b as e,j as r}from"./BMw0ieou.js";const s={__name:"NewsletterSignup",setup(_){return e(""),e(!1),(a,o)=>r("",!0)}},n=t(s,[["__scopeId","data-v-c4f36d7b"]]);export{n as default};

@@ -1,0 +1,1 @@
+import{_ as t}from"./DlAUqK2U.js";import{c,o as e}from"./BMw0ieou.js";const o={},s={class:"studio-text"};function a(r,_){return e(),c("div",s,'I said "Eventually"')}const i=t(o,[["render",a],["__scopeId","data-v-942c9cfc"]]);export{i as default};

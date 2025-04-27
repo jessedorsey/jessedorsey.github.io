@@ -1,0 +1,1 @@
+import{d as a,H as n,c as s,a as r,I as c,J as i,o as e,D as l}from"./BMw0ieou.js";const _={class:"bookshelf"},d={class:"books-list"},f=a({__name:"[slug]",setup(u){return n(),(o,p)=>(e(),s("div",_,[r("div",d,[(e(!0),s(c,null,i(o.books,t=>(e(),s("div",{key:t.isbn},l(t),1))),128))])]))}});export{f as default};
