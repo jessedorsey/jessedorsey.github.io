@@ -1,0 +1,1 @@
+import{_ as o}from"./DlAUqK2U.js";import{c,o as e}from"./C-c69ZSP.js";const a={},r={class:"sr-only","aria-label":"Loading...",role:"status"};function t(s,n){return e(),c("div",r)}const d=o(a,[["render",t],["__scopeId","data-v-dee8ccb5"]]);export{d as default};

@@ -1,0 +1,1 @@
+import{_ as e}from"./DlAUqK2U.js";import{c as o,o as t}from"./C-c69ZSP.js";const c={},r={class:"tag-page"};function s(a,_){return t(),o("div",r," Category Page ")}const i=e(c,[["render",s]]);export{i as default};
