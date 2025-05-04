@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
+import GitHubIcon from './icons/GitHubIcon.vue'
 
 const systems = [
   { value: "2022 – 2025", description: "Decimal (Standard)" },
@@ -13,6 +14,11 @@ const systems = [
   { value: "1YA – 1YB", description: "Base-36 (Alphanumeric)" }
 ];
 
+const githubLinksText = [
+  "Steal this site!!",
+  "But you wouldn't pirate a website!"
+]
+
 const copyrightText = ref('2022-2025');
 const currentSystem = ref('Decimal (Standard)');
 
@@ -22,23 +28,29 @@ const setCopyrightText = () => {
   currentSystem.value = randomSystem.description;
 };
 
+const githubText = computed(() => {
+  const randomText = githubLinksText[Math.floor(Math.random() * githubLinksText.length)];
+  return randomText
+})
+
 onMounted(() => {
   setCopyrightText();
 });
 </script>
 
 <template>
-    <footer>
-      <p>
-        <span class="copyright-symbol">&copy;</span>
-        <span 
-          class="copyright-date" 
-          :title="currentSystem"
-          @click="setCopyrightText"
-        >{{ copyrightText }}</span>
-        <span class="copyright-name"> - Jesse</span>
-      </p>
-    </footer>
+  <footer>
+    <p>
+      <span class="copyright-symbol">&copy;</span>
+      <span class="copyright-date" :title="currentSystem" @click="setCopyrightText">{{ copyrightText }}</span>
+      <span class="copyright-name"> - Jesse</span>
+    </p>
+    <p class="pright"><a title="See the source on github" href="https://github.com/jessedorsey/jessedorsey.github.io/"
+        target="_blank">{{ githubText }}
+      </a>
+      <GitHubIcon />
+    </p>
+  </footer>
 </template>
 
 <style scoped>
@@ -52,26 +64,34 @@ footer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  padding: 0 10px;
 }
-  footer p {
-    width: 90%;
-    margin: 0 auto;
-    font-size: 11px;
-    color: #333;
-    display: flex;
-    gap: 0.25rem;
-  }
 
-  .copyright-date {
-    user-select: none;
-    cursor: pointer;
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
+footer p {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 11px;
+  color: #333;
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
 
-  .copyright-date:hover {
-    color: #666;
-  }
+.pright {
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.copyright-date {
+  user-select: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.copyright-date:hover {
+  color: #666;
+}
 
 .footer {
   padding: 2rem;
@@ -94,4 +114,4 @@ footer {
   font-size: 0.9rem;
   margin-top: 1rem;
 }
-</style>  
+</style>
