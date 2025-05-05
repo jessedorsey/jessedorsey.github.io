@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import Tag from '~/components/Tag.vue'
+import { useHead } from '#app'
+
 
 const route = useRoute()
 const { data: post } = await useAsyncData(route.path, () => {
@@ -15,6 +17,33 @@ const formatDateTime = (date: string | Date | undefined) => {
   if (!date) return ''
   return new Date(date).toISOString()
 }
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": post.value?.title,
+        "datePublished": formatDateTime(post.value?.date),
+        "dateModified": formatDateTime(post.value?.date),
+        "description": post.value?.description || "",
+        "author": {
+          "@type": "Person",
+          "name": "Jesse Dorsey",
+          "url": "https://jessedorsey.com"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Jesse Dorsey",
+        },
+        "keywords": post.value ? [...(post.value.tags || []), ...(post.value.categories || [])].join(', ') : ""
+      }
+    }
+  ]
+})
+
 </script>
 
 <template>
