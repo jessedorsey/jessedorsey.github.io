@@ -1,4 +1,5 @@
 import { ref } from 'vue'
+import { usePseudoRandom } from './usePseudoRandom'
 
 // I'm usually indecisive about colors - there's a funny story about that.
 // For now I'll just make the thing use a bunch of different colors on reload.
@@ -13,7 +14,8 @@ const colorSets = [
 ]
 
 export const useColors = () => {
-    const currentColors = ref(colorSets[Math.floor(Math.random() * colorSets.length)])
+    const index = usePseudoRandom('color-theme', colorSets.length, 3)
+    const currentColors = ref(colorSets[index])
 
     const cssVariables = computed(() => ({
         '--primary-color': currentColors.value.primary,

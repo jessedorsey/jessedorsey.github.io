@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import GitHubIcon from './icons/GitHubIcon.vue'
+import { usePseudoRandom } from '#imports';
 
 const systems = [
   { value: "2022 – 2025", description: "Decimal (Standard)" },
@@ -23,19 +24,27 @@ const copyrightText = ref('2022-2025');
 const currentSystem = ref('Decimal (Standard)');
 
 const setCopyrightText = () => {
-  const randomSystem = systems[Math.floor(Math.random() * systems.length)];
+  const randomSystem = systems[usePseudoRandom('number-systems', systems.length, 3)];
   copyrightText.value = randomSystem.value;
   currentSystem.value = randomSystem.description;
 };
 
-const githubText = computed(() => {
-  const randomText = githubLinksText[Math.floor(Math.random() * githubLinksText.length)];
-  return randomText
-})
+const githubOriginalValue = 'Find this on github'
+const githubText = ref(githubOriginalValue)
+const setGithubText = () => {
+  githubText.value = githubLinksText[Math.floor(Math.random() * githubLinksText.length)];
+}
+const resetGithubText = () => {
+  githubText.value = githubOriginalValue
+}
 
 onMounted(() => {
-  setCopyrightText();
+  setCopyrightText()
 });
+
+
+
+
 </script>
 
 <template>
@@ -45,8 +54,10 @@ onMounted(() => {
       <span class="copyright-date" :title="currentSystem" @click="setCopyrightText">{{ copyrightText }}</span>
       <span class="copyright-name"> - Jesse</span>
     </p>
-    <p class="pright"><a title="See the source on github" href="https://github.com/jessedorsey/jessedorsey.github.io/"
-        target="_blank">{{ githubText }}
+    <p class="pright">
+      <a @mouseenter="setGithubText" @mouseleave="resetGithubText" title="See the source on github"
+        href="https://github.com/jessedorsey/jessedorsey.github.io/" target="_blank">
+        {{ githubText }}
       </a>
       <GitHubIcon />
     </p>
