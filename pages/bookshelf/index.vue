@@ -19,6 +19,7 @@ const { data: books } = await useAsyncData('books-list', () => {
         <div class="books-grid">
             <BookCard v-for="book in books" :key="book.isbn" :book="book" />
         </div>
+        <p>Cover images courtesy of Open Library (openlibrary.org)</p>
     </div>
 </template>
 
