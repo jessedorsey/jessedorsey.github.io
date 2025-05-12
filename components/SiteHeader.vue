@@ -27,9 +27,9 @@ onUnmounted(() => {
 <template>
     <header role="banner">
         <div class="h-container" :class="{ 'scrolled': isScrolled }">
-            <NuxtLink to="/" aria-label="Home page">
+            <a href="/" aria-label="Home page">
                 <h1 class="namelink">Jesse Dorsey</h1>
-            </NuxtLink>
+            </a>
             <button class="hamburger" @click="toggleMenu" :aria-expanded="isMenuOpen"
                 aria-label="Toggle navigation menu">
                 <span class="hamburger-box">
