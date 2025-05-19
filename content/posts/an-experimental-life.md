@@ -9,6 +9,7 @@ tags:
 ---
 
 >"That will be a problem for old Jesse"
+>
 > -- <cite>Me, nearly every year up until I hit 35.</cite>
 
 When you are young, risk is a part of the process of growing. You don't think about it, and you don't get a choice in it, you just do it. Every decision, whether wittingly or unwittingly, is a step towards discovering something new. You may fail, but in most cases failure isn't actually failure, it's just the next part of the experiment.[^1]
