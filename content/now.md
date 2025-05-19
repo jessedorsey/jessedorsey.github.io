@@ -12,7 +12,7 @@ Interesting times. Interesting times.
 ## What are the days like
 
 - Looking out for future adventures, starting what may turn into my digital nomad phase
-- Planning new digital murals after TeamLab beat me to the one I wanted to do but couldn't get out. (There's is excellent go check it out)
+- Planning new digital murals after TeamLab beat me to the one I wanted to do but couldn't get out. (Theirs is excellent go check it out)
 - Catching up for the years of open-source projects I should have put out.
 - Actually using my blog [blog](/posts).
 - My music is way better, but still not good enough where I want to put it out.
