@@ -32,9 +32,7 @@ onUnmounted(() => {
             </a>
             <button class="hamburger" @click="toggleMenu" :aria-expanded="isMenuOpen"
                 aria-label="Toggle navigation menu">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
+                <span class="hamburger-box"><span class="hamburger-inner"></span></span>
             </button>
             <nav role="navigation" aria-label="Main navigation" class="desktop-nav">
                 <div class="internal-links">
