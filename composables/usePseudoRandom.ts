@@ -1,3 +1,11 @@
+/**
+ * This is a pseudo-random number generator that uses localStorage to remember previous choices.
+ * Core use is to generate a random number between 0 and optionCount - 1, but not repeat the same number in a row.
+ * @param key - The key to use for the random number
+ * @param optionCount - The number of options to choose from
+ * @param memorySize - The number of previous choices to remember
+ * @returns A random number between 0 and optionCount - 1
+ */
 export function usePseudoRandom(key: string, optionCount: number, memorySize = 3): number {
   const fallbackRandom = Math.floor(Math.random() * optionCount)
   if (!import.meta.client) {
