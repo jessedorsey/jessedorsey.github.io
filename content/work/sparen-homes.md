@@ -1,6 +1,6 @@
 ---
 title: "Sparen Homes (Techstars '21')"
-date: 2026-01-01
+date: 2022-01-30
 endDate: now
 type: "monies"
 description: "A platform for making home ownership more accessible through innovative financing and community-focused development. Building tools and systems to help people find, finance, and own homes in a more equitable way."
