@@ -20,11 +20,11 @@ useHead({
           "https://twitter.com/_jessedorsey",
           "https://instagram.com/reallyjesse"
         ],
-        "jobTitle": "CTO at Sparen, Co-Founder at Oddity Nook",
+        "jobTitle": "Head of Engineering at ConStrat AI, Co-Founder at Oddity Nook",
         "worksFor": [
           {
             "@type": "Organization",
-            "name": "Sparen Homes"
+            "name": "ConStrat AI"
           },
           {
             "@type": "Organization",
@@ -48,7 +48,7 @@ useHead({
           "Machine Learning",
           "System Architecture"
         ],
-        "description": "Jesse Dorsey is a senior engineering leader, currently CTO at Sparen and Co-Founder of Oddity Nook. With over 15 years of experience, he has led high-impact engineering teams and built scalable systems across startups and enterprise environments."
+        "description": "Jesse Dorsey is a senior engineering leader, currently Head of Engineering at ConStrat AI and Co-Founder of Oddity Nook. With over 15 years of experience, he has led high-impact engineering teams and built scalable systems across startups and enterprise environments."
       }
     }
   ]
